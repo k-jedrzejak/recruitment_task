@@ -63,6 +63,12 @@
     -webkit-transition: $delay linear;
     -o-transition: $delay linear;
   }
+
+  @mixin font($size:null, $weight:null, $family:null){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family
+  }
   
   //position
   
