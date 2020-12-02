@@ -1,0 +1,15 @@
+@import "../tools/mixins";
+@import "../config/fonts";
+
+*{
+    @include padding(all,0);
+    @include margin(all,0);
+    box-sizing: border-box;
+    font-family: $helvetica;
+}
+
+.c-container {
+    @include width-height(100%);
+    @include margin();
+    @include flex(center,space-between);
+}

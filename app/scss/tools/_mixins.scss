@@ -1,0 +1,84 @@
+@mixin padding($direction: all, $size:null) {
+    @if $direction == all {
+      padding: $size;
+    } @else {
+      padding-#{$direction}: $size;
+    }
+  }
+
+  @mixin margin($direction: all, $size:auto) {
+    @if $direction == all {
+      margin: $size;
+    } @else {
+      margin-#{$direction}: $size;
+    }
+  }
+  
+  @mixin border($direction: all, $width: 1px, $style: solid, $color:null) {
+    @if $direction == all {
+      border: $width $style $color;
+    } @else if $direction == none {
+      border: none;
+    } @else {
+      border-#{$direction}: $width $style $color;
+    }
+  }
+  
+  @mixin flex($align: center, $justify: initial) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: $align;
+    -webkit-align-items: $align;
+    -moz-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+    -webkit-justify-content: $justify;
+    -moz-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+  }
+  
+  @mixin flex-basis($basis) {
+    -ms-flex-preferred-size: $basis;
+    flex-basis: $basis;
+  }
+  
+  @mixin flex-direct($direct) {
+    -webkit-box-orient: $direct;
+    -webkit-box-direction: $direct;
+    -ms-flex-direction: $direct;
+    flex-direction: $direct;
+  }
+  
+  @mixin width-height($width: null, $height: null) {
+    width: $width;
+    height: $height;
+  }
+  
+  @mixin transition($delay: 0.2s) {
+    transition: $delay linear;
+    -webkit-transition: $delay linear;
+    -o-transition: $delay linear;
+  }
+  
+  //position
+  
+  @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+  
+  @mixin absolute($args...) {
+    @include position(absolute, $args...);
+  }
+  
+  @mixin relative($args...) {
+    @include position(relative, $args...);
+  }
+  
