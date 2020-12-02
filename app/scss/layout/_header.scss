@@ -1,0 +1,12 @@
+@import "config/fonts";
+@import "config/colors";
+@import "tools/mixins";
+
+
+.l-header{
+    @include width-height(100%,50px);
+    @include flex();
+    @include padding(left,15px);
+    @include padding(right,15px);
+    background: $menu-color;
+} 

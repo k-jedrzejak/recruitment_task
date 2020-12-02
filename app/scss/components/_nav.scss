@@ -1,0 +1,27 @@
+@import "config/fonts";
+@import "config/colors";
+@import "tools/mixins";
+
+
+.c-nav{
+    &__list{
+        list-style: none;
+    }
+    &__item{
+        display: inline-block;
+        &:not(:last-child){
+            @include padding(right,20px);
+        }
+        
+    }
+    &__link{
+        @include font($xs-font, $bold);
+        color:gray;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include transition;
+        &:hover{
+            color: $black;
+        }
+    }
+}
