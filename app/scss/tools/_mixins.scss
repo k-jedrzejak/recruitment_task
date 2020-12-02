@@ -24,7 +24,7 @@
     }
   }
   
-  @mixin flex($align: center, $justify: initial) {
+  @mixin flex($align: center, $justify: null) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
